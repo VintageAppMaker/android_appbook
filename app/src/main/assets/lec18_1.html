@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body style= "background-color: #FFFFFF">
+<h1>App 아이콘과 이름 설정</h1>
+<p>설명:</p>
+<blockquote>
+    <p>Android에서 아이콘과 이름을 바꾸기위해서는 AndroidManifest.xml의 정보를 수정해야 한다. 다음은 아이콘과 이름을 바꾸는 내용을 정리한 것이다.</p>
+</blockquote>
+<p>이름변경하기:</p>
+<ul>
+    <li>AndroidManifest.xml에서</li>
+</ul>
+<div class="highlight highlight-text-xml">
+<pre>&lt;<span class="pl-ent">application</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">icon</span>=<span class="pl-s"><span class="pl-pds">"</span>@mipmap/ic_launcher<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">label</span>=<span class="pl-s"><span class="pl-pds">"</span>@string/app_name<span class="pl-pds">"</span></span></pre>
+</div>
+<p>android:label의 값을 변경하면 된다(직접 바꾸어도 되고, ctrl + click을 하여 해당 xml의 값을 변경해도 된다.). android:icon은 아이콘을 지정하는 것이다.</p>
+<p>아이콘변경하기:&nbsp;<img src="https://github.com/adsloader/AndroidDoc/raw/master/images/image12.gif" width = 100% alt="" /></p>
+</body>

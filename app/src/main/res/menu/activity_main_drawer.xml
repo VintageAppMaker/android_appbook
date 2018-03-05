@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Homepage와 Github link">
+        <menu>
+            <item
+                android:id="@+id/nav_map"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="homepage" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="github 연결" />
+
+
+        </menu>
+    </item>
+
+    <item android:title="About Android">
+
+        <menu>
+            <item
+                android:id="@+id/lect0"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Android" />
+            <item
+                android:id="@+id/lect1"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="생태계" />
+            <item
+                android:id="@+id/lect2"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Android 장단점" />
+
+            <item
+                android:id="@+id/lect3"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="무엇으로 만드는 가?" />
+
+            <item
+                android:id="@+id/lect4"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="최소한의 지식, 경험, 검색" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="개발환경 설치" >
+        <menu>
+            <item
+                android:id="@+id/lect5"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="설치" />
+
+            <item
+                android:id="@+id/lect6"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핸드폰 개발자 모드" />
+
+            <item
+                android:id="@+id/lect7"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="ADB설정(드라이버 및 기타)" />
+        </menu>
+
+
+    </item>
+
+    <item android:title="Android Studio 기초" >
+        <menu>
+            <item
+                android:id="@+id/lect8"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="프로젝트란" />
+
+            <item
+                android:id="@+id/lect9"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="프로젝트 생성" />
+
+            <item
+                android:id="@+id/lect10"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="프로젝트 가져오기 -1 " />
+
+            <item
+                android:id="@+id/lect11"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="프로젝트 가져오기 -2 " />
+
+            <item
+                android:id="@+id/lect47"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="설정하기" />
+
+            <item
+                android:id="@+id/lect12"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핫키 - 참고하기 " />
+
+            <item
+                android:id="@+id/lect13"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핫키 - 검색 " />
+
+            <item
+                android:id="@+id/lect14"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핫키 - 자동완성 " />
+
+            <item
+                android:id="@+id/lect15"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핫키 - override " />
+
+            <item
+                android:id="@+id/lect16"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="핫키 - 정의로 이동 " />
+
+            <item
+                android:id="@+id/lect17"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="App 아이콘과 이름설정" />
+
+            <item
+                android:id="@+id/lect18"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="파일 및 경로구조" />
+
+            <item
+                android:id="@+id/lect19"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="AndroidMainifest.xml" />
+
+            <item
+                android:id="@+id/lect20"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="안드로이드 실행파일 – apk" />
+
+            <item
+                android:id="@+id/lect21"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="apk 내보내기 - PC, Phone" />
+
+        </menu>
+
+
+    </item>
+
+    <item android:title="코딩시 반드시 필요한 기능" >
+        <menu>
+            <item
+                android:id="@+id/lect22"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="화면 디자인" />
+
+            <item
+                android:id="@+id/lect23"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="java 코딩" />
+
+            <item
+                android:id="@+id/lect24"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="어디서 부터 시작인가?" />
+
+            <item
+                android:id="@+id/lect25"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="디버깅 방법 – 디버거" />
+
+            <item
+                android:id="@+id/lect26"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="디버깅 방법 –logcat" />
+
+        </menu>
+
+
+    </item>
+
+    <item android:title="Android의 구성(컴포넌트)" >
+        <menu>
+            <item
+                android:id="@+id/lect27"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Android 구성" />
+
+            <item
+                android:id="@+id/lect28"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="퍼미션" />
+
+            <item
+                android:id="@+id/lect29"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="중요구조" />
+
+            <item
+                android:id="@+id/lect30"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Toast (팝업메시지)" />
+       </menu>
+
+
+    </item>
+
+    <item android:title="화면 디자인" >
+        <menu>
+            <item
+                android:id="@+id/lect31"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="간략한 XML 설명" />
+
+            <item
+                android:id="@+id/lect32"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Layout이란?" />
+
+            <item
+                android:id="@+id/lect33"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Layout – Linear" />
+
+            <item
+                android:id="@+id/lect34"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Layout – Relative" />
+
+            <item
+                android:id="@+id/lect35"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Layout – Frame" />
+
+            <item
+                android:id="@+id/lect36"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Layout- ConstraintLayout" />
+
+            <item
+                android:id="@+id/lect37"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="위젯배경에 이미지 넣기" />
+        </menu>
+
+    </item>
+
+    <item android:title="기본코딩" >
+        <menu>
+            <item
+                android:id="@+id/lect38"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Activity" />
+
+            <item
+                android:id="@+id/lect39"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="동기, 비동기 방식" />
+
+            <item
+                android:id="@+id/lect40"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="가장흔한 코딩순서" />
+
+            <item
+                android:id="@+id/lect41"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Button" />
+
+            <item
+                android:id="@+id/lect42"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="TextView" />
+
+            <item
+                android:id="@+id/lect43"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="EditText" />
+
+            <item
+                android:id="@+id/lect44"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Activity – 데이터전송" />
+
+            <item
+                android:id="@+id/lect45"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Service" />
+
+            <item
+                android:id="@+id/lect46"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="BroadCastReceiver" />
+
+        </menu>
+
+    </item>
+
+
+    <item android:title="Apps">
+        <menu>
+            <item
+                android:id="@+id/nav_apps"
+                android:title="안드로이드 마켓" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<pre><br /><br />2. AndroidMainifest.xml에서 다음과 같이 수신받을 Intent를 지정한다.</pre>
+    <hr />
+    <pre>&lt;<span style="color: #22863a;">receiver</span></pre>
+</div>
+<div class="highlight highlight-text-xml">
+<pre class="cjk"><span style="color: #24292e;">    <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">android:name</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">=</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">".MyReceiver"</span></span></span></span></span></span>
+<span style="color: #24292e;">    <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">android:enabled</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">=</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"true"</span></span></span></span></span></span>
+<span style="color: #24292e;">    <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">android:exported</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">=</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"true"</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> &gt;</span></span></span></span></span>
+<span style="color: #24292e;">       <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&lt;</span><span style="color: #22863a;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">intent-filter</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt;</span></span></span></span></span>
+<span style="color: #24292e;">             <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&lt;</span><span style="color: #22863a;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">action</span></span> <span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">android:name</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">=</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"android.intent.action.USER_PRESENT"</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> /&gt;</span></span></span></span></span>
+<span style="color: #24292e;">       <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&lt;/</span><span style="color: #22863a;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">intent-filter</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt;</span></span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US">&lt;/<span style="color: #22863a;">receiver</span>&gt;</span></span></span></span>
+</pre>
+    <hr />
+    <pre>&nbsp;</pre>
+</div>
+<ul>
+    <li>실행한다. 그리고 실행되자마자 back 키를 눌러 화면을 종료한다.</li>
+    <li>Activity는 메모리에서 삭제된 것이다. 그런 후,</li>
+    <li>파워버튼을 눌러 화면을 끈 후, 다시 파워버튼을 눌러 화면을 켜본다.</li>
+    <li>Toast 메시지가 출력된다.</li>
+</ul>
+
+<hr>
+<button type= button onclick="javascript:location.href='launch://github.com/adsloader/SimpleBroadCastTest'"> 예제로 이동 </button>
+</body>

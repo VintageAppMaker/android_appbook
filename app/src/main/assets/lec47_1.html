@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h1>BroadCastReceiver</h1>
+<p>설명</p>
+<blockquote>
+    <p>Intent를 방송(BroadCast)하는 것을 받는 핸들러이다. Intent는 App간에도 전송을 하지만, Android System이 방송을 해서 알려주는 경우도 있다. 그리고 반대로 App이 방송을 하는 경우도 있다. 이를 받기 위해서는 BroadCastReceiver를 생성해야 하고 어떤 메시지(intent)를 잡을 지 XML에 지정해주어야 한다.&nbsp;<strong>참고로 BroadCastReceiver는 오랫동안 시간을 소요해서는 절대로 안된다. 단 몇초만에 코드를 수행</strong>하고 나와주어야 한다.</p>
+</blockquote>
+<p>BroadCasteReceiver는 다음과 같은 방법으로 생성할 수 있다.</p>
+<ul>
+    <li>XML에 정의하는 방법</li>
+    <li>code로 동적으로 생성하는 방법</li>
+</ul>
+<p>BroadCastReceiver를 생성하는 방법</p>
+<p><img src="https://github.com/adsloader/AndroidDoc/raw/master/images_2/broadcastreceiver.gif" alt="image" width="100%" /></p>
+<h3><a id="user-content-코딩하기" class="anchor" href="https://github.com/adsloader/AndroidDoc/blob/master/doc/47.md#코딩하기"></a>코딩하기</h3>
+<p>1. MyReceiver.java의 onReceive 이벤트핸들러에서 다음과 같이 코딩을 한다.</p>
+<hr />
+<p>&nbsp;</p>
+<div class="highlight highlight-source-java">
+<pre class="cjk"><span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">import</span> android.content.BroadcastReceiver<span style="color: #005cc5;">;</span></span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">import</span> android.content.Context;</span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">import</span> android.content.Intent;</span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">import</span> android.widget.Toast;</span></span></span></span>
+
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">public</span> <span style="color: #d73a49;">class</span> <span style="color: #6f42c1;">MyReceiver</span> <span style="color: #d73a49;">extends</span> <span style="color: #6f42c1;">BroadcastReceiver</span> {</span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">public</span></span> <span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">MyReceiver</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">() {</span></span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">}</span></span></span></span></span>
+
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">@Override</span></span></span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">public</span></span> <span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">void</span></span> <span style="color: #6f42c1;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">onReceive</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(Context </span><span style="color: #e36209;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">arg0</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">, Intent </span><span style="color: #e36209;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">arg1</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">) {</span></span></span></span></span>
+<span style="color: #24292e;">       <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">Toast</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">makeText(arg0, </span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"Unlock~~"</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">, Toast</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="color: #005cc5;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">LENGTH_LONG</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">)</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">show();</span></span></span></span></span>
+
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">}</span></span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US">}</span></span></span></span></pre>
+
+</body>

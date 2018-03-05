@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<p>시작 설정바꾸기:</p>
+<p>AndroidManifest.xml 파일을 더블클릭한다. 아래에서 activity의 tag 안의&nbsp;<em>&lt; intent-filter &gt; .. &lt; /intent-filter &gt;</em>&nbsp;내용을 잘라낸다.</p>
+<div class="highlight highlight-text-xml">
+<pre>&lt;<span class="pl-ent">activity</span>&nbsp;android:name=<span class="pl-s"><span class="pl-pds">"</span>.activity_1_1<span class="pl-pds">"</span></span>&gt;
+&nbsp; &nbsp;&lt;<span class="pl-ent">intent-filter</span>&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;<span class="pl-ent">action</span>&nbsp;android:name=<span class="pl-s"><span class="pl-pds">"</span>android.intent.action.MAIN<span class="pl-pds">"</span></span>&nbsp;/&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;<span class="pl-ent">category</span>&nbsp;android:name=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.LAUNCHER<span class="pl-pds">"</span></span>&nbsp;/&gt;
+&nbsp; &nbsp;&lt;/<span class="pl-ent">intent-filter</span>&gt;
+&lt;/<span class="pl-ent">activity</span>&gt;
+</pre>
+</div>
+<p>실행하고자하는 &lt;/ activity&gt; 내의 tag로 붙여넣는다.</p>
+<p><img src="https://github.com/adsloader/AndroidDoc/raw/master/images/image10.gif" width = 100% alt="" /></p>
+</body>

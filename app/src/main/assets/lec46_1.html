@@ -1,0 +1,37 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h1>Service</h1>
+<p>설명</p>
+<blockquote>
+    <p>화면에 보이지 않지만 실행되는 컴포넌트이다. 카카오톡 같은 통신 프로그램 외에도 전화관련 App, Battery 정보를 보여주는 App, 백신 App, 위치추적이나 기타등등의 App들은 대부분 필요하다.</p>
+</blockquote>
+<ul>
+    <li>startService()로 실행시킬 수 있다.</li>
+    <li>첫번째 파라메터는 context를 상속받은 객체(Activity에서는 자신-this-), 두번째 파라메터는 호출하고자 하는 클래스명.class</li>
+    <li>서비스는 핸드폰의 현재상태에 따라 무참하게 삭제될 수 있으므로 BroadCastReceiver나 기타 컴포넌트에서 주기적으로 호출해주는 것이 좋다.</li>
+</ul>
+<p>참고</p>
+<blockquote>
+    <p>Android의 태생적 한계인 Battery 소모 때문에 Android OS는 무참하게 개발자들이 만든 Service를 죽이려고 한다. 그리고 Battery saver 같은 프로그램들도 service를 죽이려고 한다. 개발자들은 이런 상황을 잘 파악하여 자신의 Service가 죽지않는 노하우도 개발해야 한다.</p>
+</blockquote>
+<ul>
+    <li>Service를 생성하는 방법</li>
+</ul>
+<p><img src="https://github.com/adsloader/AndroidDoc/raw/master/images_2/service.gif" width = 100% alt="image" /></p>
+<h3>코딩하기</h3>
+<hr />
+<p>&nbsp;</p>
+<p>1. MainActivity의 onCreate 이벤트핸들러에서 다음과 같이 코딩을 한다.</p>
+<pre class="cjk"><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US">@Override</span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #d73a49;">protected</span> <span style="color: #d73a49;">void</span> onCreate(Bundle savedInstanceState) {</span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #005cc5;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">super</span></span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">onCreate(savedInstanceState);</span></span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">setContentView(R</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">layout</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">activity_main);</span></span></span></span></span>
+
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #6a737d;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">// </span></span></span></span></span><span style="font-size: xx-small;"><span style="color: #6a737d;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">서비스를 실행시킵니다</span></span></span><span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="color: #6a737d;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span></span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">Intent Service </span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">=</span></span> <span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">new</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Intent(</span><span style="color: #005cc5;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">this</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">, MainService</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">class);</span></span></span></span></span>
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">startService(Service);</span></span></span></span></span>
+
+<span style="color: #24292e;">   <span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">Log</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">d(</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"ALLTEST"</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">, String</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">.</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">format(</span><span style="color: #032f62;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">"\n%d: onCreate"</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">, nLineNumber</span><span style="color: #d73a49;"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">++</span></span><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">));</span></span></span></span></span>
+<span style="color: #24292e;"><span style="font-family: 'Liberation Mono', monospace;"><span style="font-size: xx-small;"><span lang="en-US"><span style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;">}</span></span></span></span></span></pre>
+<hr />
+</body>
